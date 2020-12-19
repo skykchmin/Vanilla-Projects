@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Questrial', sans-serif;
+  background-color: #666;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 100vh;
+  margin: 0;
+}
+
+h1{
+  color: #fff;
+}
+
+.screen{
+  cursor: pointer; /* 비디오를 재생 또는 일시정지하기 위해 커서를 넣는다 */
+  width: 70%;
+  background-color: #000 !important;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.controls{
+  background: #333;
+  color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 70%; /* 스크린과 컨트롤 사이즈를 맞춰준다 */
+  
+}
+
+.controls .btn{
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.controls .fa-play{
+  color: #28a745;
+}
+
+.controls .fa-stop{
+  color: #dc3545;
+}
+
+.controls .fa-pause{
+  color: #fff;
+}
+
+.controls .timestamp{
+  color: #fff;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.btn:focus{
+  outline: 0;
+}
+
+@media(max-width: 800px){ /* 화면을 줄일때 너무 화면이 작아지는 것을 방지 */
+    .screen,
+    .controls {
+    width: 90%;
+  }
+}
